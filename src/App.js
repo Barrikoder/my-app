@@ -11,7 +11,7 @@ const client = contentful.createClient({
 });
 // This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
 client
-  .getEntry("5PeGS2SoZGSa4GuiQsigQu")
+  .getEntry("76gwhMetYmgPehRAPgA9Ub")
   .then(entry => console.log(entry))
   .catch(err => console.log(err));
 
