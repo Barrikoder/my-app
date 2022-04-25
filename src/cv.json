@@ -1,0 +1,60 @@
+[
+    {
+        "name": "Ruslan Valikhanov",
+        "age": 35,
+        "gender": "male",
+        "education": [
+            {
+                "name": "Moscow State University of Printing Arts (MGUP), specialist in publishing.",
+                "time": {
+                    "from": 2008,
+                    "to": 2014
+                }
+            },
+            {
+                "name": "British higher school of art & design, Moscow. 2012",
+                "time": {
+                    "from": 2012,
+                    "to": 2012
+                }
+            }
+        ],
+        "languages": [
+            {
+                "English": "fluent"
+            },
+            {
+                "German": "C1"
+            },
+            {
+                "Russian": "Native"
+            }
+        ],
+        "experience": [
+            {
+                "company": "SIMPLE",
+                "time": {
+                    "from": 2011,
+                    "to": 2013
+                },
+                "role": "designer, pre-press, illustrator"
+            },
+            {
+                "company": "Freelance",
+                "time": {
+                    "from": 2013,
+                    "to": 2017
+                },
+                "role": "designer, illustrator"
+            },
+            {
+                "company": "Amboss",
+                "time": {
+                    "from": 2017,
+                    "to": 2021
+                },
+                "role": "product designer"
+            }
+        ]
+    }
+]
