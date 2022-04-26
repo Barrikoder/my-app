@@ -1,6 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
-import React, { useState, useEffect } from "react";
+
+import logo from './logo.svg';
+import './App.css';
+import React, { useState, useEffect } from 'react';
+import Description from './Description';
+
 
 const contentful = require("contentful");
 const client = contentful.createClient({
@@ -43,6 +46,7 @@ function App() {
   }, []);
 
   return <h1>{text}</h1>;
+
 }
 
 export default App;
