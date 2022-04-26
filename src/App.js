@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import Description from './Description';
+
+
 
 const contentful = require("contentful");
 const client = contentful.createClient({
@@ -12,34 +15,38 @@ const client = contentful.createClient({
 
 //put fetch data inside use effect
 
-  // const fetchData = async() => { //is a function with await inside of it
-  //   const response = await (client.getEntries()) //function provided by contentful. they will call url for me. one can use await only inside the function
-  //   // return response.items
-  //   console.log(response.items)
-  // }
+// const fetchData = async() => { //is a function with await inside of it
+//   const response = await (client.getEntries()) //function provided by contentful. they will call url for me. one can use await only inside the function
+//   // return response.items
+//   console.log(response.items)
+// }
 
-  // const fetchData = () =>
-  // fetch(client)
-  //   .then((res) => res.json())
-  //   .then(data => data.text)
-  //   .then((text) => )
-    // .then((json) => setText(json.description));
+// const fetchData = () =>
+// fetch(client)
+//   .then((res) => res.json())
+//   .then(data => data.text)
+//   .then((text) => )
+// .then((json) => setText(json.description));
 
 function App() {
   const [text, setText] = useState("Here we go")
 
   const fetchData = () => {
     client.getEntries() //right function which takes the object - look documentation. 
-      .then((entries) => console.log(entries))
+      .then((entries) => {
+        setText(entries.items[0]);
+        console.log(entries)
+      })
       .catch(console.error)
-    }
-    
+  }
+
   useEffect(() => {
     fetchData();
   }, []);
 
   return (
-    <h1>Hello!</h1>
+    <h1>{<Description />}</h1>
+
   );
 }
 
