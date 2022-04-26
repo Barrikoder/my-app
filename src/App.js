@@ -10,19 +10,13 @@ const client = contentful.createClient({
   accessToken: "4aNCbkAhlMxIboRs-rB6e0w5MgkS2H4h-D7WMffuns4"
 });
 
-client.getEntries('cookbookBlog') //right function which takes the object - look documentation. 
-  .then((contentType) => console.log(contentType))
-  .catch(console.error)
+//put fetch data inside use effect
 
-  const fetchData = async() => { //is a function with await inside of it
-    const response = await (client.getEntries()) //function provided by contentful. they will call url for me. one can use await only inside the function
-    // return response.items
-    console.log(response.items)
-  }
-
-  fetchData()
-  .then()
-  
+  // const fetchData = async() => { //is a function with await inside of it
+  //   const response = await (client.getEntries()) //function provided by contentful. they will call url for me. one can use await only inside the function
+  //   // return response.items
+  //   console.log(response.items)
+  // }
 
   // const fetchData = () =>
   // fetch(client)
@@ -31,22 +25,21 @@ client.getEntries('cookbookBlog') //right function which takes the object - look
   //   .then((text) => )
     // .then((json) => setText(json.description));
 
-
-const Description = () => {
-  const [text, setText] = useState("Here we go")
-  useEffect(() => {
-    fetchData(setText);
-  }, []);
-  return <button onClick={() => Description()}>Text</button>
-
-}
-
 function App() {
-  return (
-    <div className="App">
+  const [text, setText] = useState("Here we go")
 
-      <Description />
-    </div>
+  const fetchData = () => {
+    client.getEntries() //right function which takes the object - look documentation. 
+      .then((entries) => console.log(entries))
+      .catch(console.error)
+    }
+    
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return (
+    <h1>Hello!</h1>
   );
 }
 
