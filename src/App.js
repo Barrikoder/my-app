@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React, { useState, useEffect } from "react";
+import Location from "./Components/LocationComp";
+import { BrowserRouter } from "react-router-dom";
 
 const contentful = require("contentful");
 const client = contentful.createClient({
@@ -42,7 +44,14 @@ function App() {
     fetchData();
   }, []);
 
-  return <h1>{text}</h1>;
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <h1>{text}</h1>
+        <div>{Location}</div>
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
