@@ -24,7 +24,7 @@ export default function MediaCard() {
                 setData(entries.items);
                 // console.log(entries);
             })
-            .catch(console.error);
+            .catch(console.error); //????? to Martin why we need it here
     };
 
     useEffect(() => {
@@ -32,13 +32,10 @@ export default function MediaCard() {
     }, []);
 
     return (
-        <div>{data && data.map((entry) => {
+        <div>{data && data.map((entry) => { // data ? data.map : <spinner /> -> (for that useState(false))
             console.log(entry)
-
             return <>
-
                 <div>
-
                     <Card sx={{ maxWidth: 345 }}>
                         <CardMedia
                             component="img"
