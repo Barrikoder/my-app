@@ -2,6 +2,11 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import MediaCard from "./Components/MediaCard";
 import ImageCard from "./Components/ImageCard";
+import DeafaultView from "./DetailView";
+import { Routes, Route, useNavigate, Link, NavLink } from "react-router-dom";
+import DetailView from './DetailView';
+import TopMenu from './Components/TopMenu';
+
 
 
 function App() {
@@ -23,7 +28,8 @@ function App() {
 
   return (
   <>
-    <div className="card">
+  <TopMenu />
+   <div className="card">
     <MediaCard />
     </div>
   </>
