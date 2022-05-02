@@ -4,7 +4,6 @@ import MediaCard from "./Components/MediaCard";
 import ImageCard from "./Components/ImageCard";
 
 
-
 function App() {
   // const [text, setText] = useState("Here we go");
 

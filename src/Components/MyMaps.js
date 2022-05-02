@@ -16,6 +16,7 @@ export default function MyMap({ lat, lng }) {
       defaultZoom={13}
     >
       <Marker width={30} anchor={[lat, lng]} />
+      
       <ZoomControl />
     </Map>
   );
