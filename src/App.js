@@ -1,12 +1,10 @@
-import './App.css';
-import React, { useState, useEffect } from 'react';
+import "./App.css";
+import React, { useState, useEffect } from "react";
 import MediaCard from "./Components/MediaCard";
-import DeafaultView from "./DetailView";
+import DetailView from "./DetailView";
+import Navigation from "./Components/Navigation";
+import ErrorPage from "./Components/ErrorPage";
 import { Routes, Route, useNavigate, Link, NavLink } from "react-router-dom";
-import DetailView from './DetailView';
-import Navigation from './Components/Navigation';
-
-
 
 function App() {
   // const [text, setText] = useState("Here we go");
@@ -26,14 +24,25 @@ function App() {
   // }, []);
 
   return (
-  <>
-  <Navigation />
-   <div className="card">
-    <MediaCard />
-    </div>
-  </>
-  );
+    <>
+      <NavLink activeclassname="active" to="/">
+        Home
+      </NavLink>
+      <NavLink activeclassname="active" to="details">
+        Details
+      </NavLink>
+      <Routes>
+        <Route path="/" element={<MediaCard />} />
+        <Route path="details" element={<DetailView />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
 
+      {/* <Navigation />
+      <div className="card">
+        <MediaCard />
+      </div> */}
+    </>
+  );
 }
 
 export default App;
