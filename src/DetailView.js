@@ -10,6 +10,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import PigeonMaps from "./Components/MyMaps";
+import AnotherDoner from "./Components/AnotherDoner";
 
 function DetailView({ data }) {
   const navigate = useNavigate();
