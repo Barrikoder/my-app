@@ -6,33 +6,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import PigeonMaps from "./MyMaps";
+import { Routes, Route, useNavigate, Link, NavLink } from "react-router-dom";
 
-const contentful = require("contentful");
-const client = contentful.createClient({
-  // This is the space ID. A space is like a project folder in Contentful terms
-  space: process.env.REACT_APP_SPACE_ID,
-  // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-  accessToken: process.env.REACT_APP_ACCESS_TOKEN,
-});
-
-
-
-export default function MediaCard() {
-
-  const [data, setData] = useState([]);
-  const fetchData = () => {
-    client
-      .getEntries() //right function which takes the object - look documentation.
-      .then((entries) => {
-        setData(entries.items);
-        console.log(entries);
-      })
-      .catch(console.error);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+export default function MediaCard({data}) {
 
 
   return (
@@ -54,17 +30,22 @@ export default function MediaCard() {
                     alt="green iguana"
                   />
                   <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                      {entry.fields.date}
+                    </Typography>
+                  <NavLink to={`details/${entry.sys.id}`}>    
                     <Typography gutterBottom variant="h2" component="div">
                       {entry.fields.header}
                     </Typography>
+                    </NavLink>
                     <Typography variant="body2" color="text.secondary">
                       {entry.fields.mainImageText}
                     </Typography>
                   </CardContent>
-                  <PigeonMaps
+                  {/* <PigeonMaps
                     lat={entry.fields.location.lat}
                     lng={entry.fields.location.lon}
-                  />
+                  /> */}
                   <CardActions>
                     <Button size="small">Share</Button>
                     <Button size="small">Learn More</Button>
