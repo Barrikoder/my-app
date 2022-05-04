@@ -6,7 +6,6 @@ import Navigation from "./Components/Navigation";
 import ErrorPage from "./Components/ErrorPage";
 import { Routes, Route, useNavigate, Link, NavLink } from "react-router-dom";
 
-
 const contentful = require("contentful");
 const client = contentful.createClient({
   // This is the space ID. A space is like a project folder in Contentful terms
@@ -49,22 +48,30 @@ function App() {
 
   return (
     <>
-      {/* <NavLink activeclassname="active" to="/">
+      <div>
+        <h1>Berlin Sausage Blog</h1>
+        <h3>
+          got hungry while standing in the longest line ever for a tipical
+          Berlin attraction? <br /> tap on the attraction you are visiting to
+          find out where you can eat the closest sausage!
+        </h3>
+        {/* <NavLink activeclassname="active" to="/">
         Home
       </NavLink>
       <NavLink activeclassname="active" to="details">
         Details
       </NavLink> */}
-      <Routes>
-        <Route path="/" element={<MediaCard  data={data}/>} />
-        <Route path="details/:id" element={<DetailView data={data} />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<MediaCard data={data} />} />
+          <Route path="details/:id" element={<DetailView data={data} />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
 
-      {/* <Navigation />
+        {/* <Navigation />
       <div className="card">
         <MediaCard />
       </div> */}
+      </div>
     </>
   );
 }
