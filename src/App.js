@@ -5,6 +5,7 @@ import DetailView from "./DetailView";
 import Navigation from "./Components/Navigation";
 import ErrorPage from "./Components/ErrorPage";
 import { Routes, Route, useNavigate, Link, NavLink } from "react-router-dom";
+import AnotherDoner from "./Components/AnotherDoner";
 
 
 const contentful = require("contentful");
@@ -49,6 +50,8 @@ function App() {
 
   return (
     <>
+          <Navigation />
+
       {/* <NavLink activeclassname="active" to="/">
         Home
       </NavLink>
@@ -56,13 +59,14 @@ function App() {
         Details
       </NavLink> */}
       <Routes>
+        <Route path="anotherDoner" element={<AnotherDoner  data={data}/>} />
         <Route path="/" element={<MediaCard  data={data}/>} />
         <Route path="details/:id" element={<DetailView data={data} />} />
+        <Route path="anotherDoner/details/:id" element={<DetailView data={data}/>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 
-      {/* <Navigation />
-      <div className="card">
+      {/* <div className="card">
         <MediaCard />
       </div> */}
     </>
