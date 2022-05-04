@@ -19,7 +19,7 @@ export default function Navigation() {
         Details
       </NavLink>
       <Routes>
-        <Route path="details" element={<DetailView />} />
+        <Route path="details/:id" element={<DetailView />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
