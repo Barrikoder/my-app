@@ -8,13 +8,12 @@ import Typography from "@mui/material/Typography";
 import PigeonMaps from "./MyMaps";
 import { Routes, Route, useNavigate, Link, NavLink } from "react-router-dom";
 
-export default function MediaCard({data}) {
-
-
+export default function MediaCard({ data }) {
   return (
     <div>
       {data &&
-        data.map((entry) => { // data ? data.map : <spinner /> -> (for that useState(false))
+        data.map((entry) => {
+          // data ? data.map : <spinner /> -> (for that useState(false))
           console.log(entry);
 
           return (
@@ -30,13 +29,13 @@ export default function MediaCard({data}) {
                     alt="green iguana"
                   />
                   <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary">
                       {entry.fields.date}
                     </Typography>
-                  <NavLink to={`details/${entry.sys.id}`}>    
-                    <Typography gutterBottom variant="h2" component="div">
-                      {entry.fields.header}
-                    </Typography>
+                    <NavLink to={`details/${entry.sys.id}`}>
+                      <Typography gutterBottom variant="h2" component="div">
+                        {entry.fields.header}
+                      </Typography>
                     </NavLink>
                     <Typography variant="body2" color="text.secondary">
                       {entry.fields.mainImageText}

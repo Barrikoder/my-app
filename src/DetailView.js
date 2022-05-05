@@ -1,7 +1,14 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import MediaCard from "./Components/MediaCard";
-import { Routes, Route, useNavigate, Link, NavLink, useParams } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useNavigate,
+  Link,
+  NavLink,
+  useParams,
+} from "react-router-dom";
 import { SystemSecurityUpdate } from "@mui/icons-material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -15,9 +22,9 @@ import AnotherDoner from "./Components/AnotherDoner";
 function DetailView({ data }) {
   const navigate = useNavigate();
   const { id } = useParams();
-  console.log("params", id, data)
+  console.log("params", id, data);
   // const oneParam = myParams.filter(param => {
-  //   return 
+  //   return
   // })
   // console.log(oneParam)
   //filter the data to retrieve only that one that has the same entry.sys.id as the myParams.id
@@ -27,9 +34,9 @@ function DetailView({ data }) {
   // }
 
   const entry = data.find((param) => {
-    return id === param.sys.id
+    return id === param.sys.id;
   });
-  console.log(entry)
+  console.log(entry);
 
   //map over the object -> render jsx
 
