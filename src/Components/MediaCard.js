@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import PigeonMaps from "./MyMaps";
 import { Routes, Route, useNavigate, Link, NavLink } from "react-router-dom";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"; 
 
 export default function MediaCard({ data }) {
   return (
@@ -38,7 +39,7 @@ export default function MediaCard({ data }) {
                       </Typography>
                     </NavLink>
                     <Typography variant="body2" color="text.secondary">
-                      {entry.fields.mainImageText}
+                      {documentToReactComponents(entry.fields.body)}
                     </Typography>
                   </CardContent>
                   {/* <PigeonMaps

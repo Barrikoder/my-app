@@ -65,7 +65,7 @@ function App() {
       <NavLink activeclassname="active" to="details">
         Details
       </NavLink> */}
-      
+
       <Routes>
         <Route path="anotherDoner" element={<AnotherDoner  data={data}/>} />
         <Route path="/" element={<MediaCard  data={data}/>} />
