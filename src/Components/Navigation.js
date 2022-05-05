@@ -11,10 +11,11 @@ import AnotherDoner from "./AnotherDoner"
 export default function Navigation() {
   return (
     <div className="navigation">
-      <NavLink activeclassname="active" to="/">
+
+      <NavLink activeclassname="active" className='topMenu' to="/">
         Home
       </NavLink>
-      <NavLink activeclassname="active" to="anotherDoner">
+      <NavLink activeclassname="active" className='topMenu' to="anotherDoner">
         Another Döner
       </NavLink>
       <Routes>

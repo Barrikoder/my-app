@@ -62,7 +62,7 @@ function App() {
         <Route path="anotherDoner" element={<AnotherDoner  data={data}/>} />
         <Route path="/" element={<MediaCard  data={data}/>} />
         <Route path="details/:id" element={<DetailView data={data} />} />
-        <Route path="anotherDoner/details/:id" element={<DetailView  data={data}/>} />
+        <Route path="anotherDoner/details/:id" element={<DetailView data={data}/>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 
