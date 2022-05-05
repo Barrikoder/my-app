@@ -8,18 +8,18 @@ import Typography from "@mui/material/Typography";
 import PigeonMaps from "./MyMaps";
 import { Routes, Route, useNavigate, Link, NavLink } from "react-router-dom";
 
-export default function AnotherDoner({data}) {
-
+export default function AnotherDoner({ data }) {
   return (
     <div>
       {data &&
-        data.map((entry) => { // data ? data.map : <spinner /> -> (for that useState(false))
+        data.map((entry) => {
+          // data ? data.map : <spinner /> -> (for that useState(false))
           console.log(entry);
 
           return (
             <>
               <div>
-                <Card sx={{ maxWidth: 400 }}>
+                <Card sx={{ maxWidth: 1000 }}>
                   <CardMedia
                     component="img"
                     height="400"
@@ -29,13 +29,13 @@ export default function AnotherDoner({data}) {
                     alt="green iguana"
                   />
                   <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary">
                       {entry.fields.date}
                     </Typography>
-                  <NavLink to={`details/${entry.sys.id}`}>    
-                    <Typography gutterBottom variant="h2" component="div">
-                      {entry.fields.header}
-                    </Typography>
+                    <NavLink to={`details/${entry.sys.id}`}>
+                      <Typography gutterBottom variant="h2" component="div">
+                        {entry.fields.header}
+                      </Typography>
                     </NavLink>
                     <Typography variant="body2" color="text.secondary">
                       {entry.fields.mainImageText}

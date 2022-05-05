@@ -49,15 +49,8 @@ function App() {
 
   return (
     <>
+      <div>
         <Navigation />
-
-<div>
-        <h1>Berlin Sausage Blog</h1>
-        <h3>
-          got hungry while standing in the longest line ever for a tipical
-          Berlin attraction? <br /> tap on the attraction you are visiting to
-          find out where you can eat the closest sausage!
-        </h3>
 
         {/* <NavLink activeclassname="active" to="/">
         Home
@@ -66,15 +59,18 @@ function App() {
         Details
       </NavLink> */}
 
-      <Routes>
-        <Route path="anotherDoner" element={<AnotherDoner  data={data}/>} />
-        <Route path="/" element={<MediaCard  data={data}/>} />
-        <Route path="details/:id" element={<DetailView data={data} />} />
-        <Route path="anotherDoner/details/:id" element={<DetailView data={data}/>} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+        <Routes>
+          <Route path="anotherDoner" element={<AnotherDoner data={data} />} />
+          <Route path="/" element={<MediaCard data={data} />} />
+          <Route path="details/:id" element={<DetailView data={data} />} />
+          <Route
+            path="anotherDoner/details/:id"
+            element={<DetailView data={data} />}
+          />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
 
-      {/* <div className="card">
+        {/* <div className="card">
         <MediaCard />
       </div> */}
       </div>
