@@ -44,9 +44,10 @@ function DetailView({ data }) {
     <>
       <div className="detailedCard">
         {/* <MediaCard /> */}
+        <button onClick={() => navigate(-1)}>back</button>
+
         <br />
         <h1>Hi this is the detailed view</h1>
-        <button onClick={() => navigate(-1)}>back</button>
       </div>
       <div>
         <Card sx={{ maxWidth: 900 }}>

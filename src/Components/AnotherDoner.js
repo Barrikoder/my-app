@@ -19,6 +19,13 @@ export default function AnotherDoner({ data }) {
           return (
             <>
               <div>
+              <h1>Berlin Döner Blog</h1>
+                <h3>
+                  got hungry while standing in the longest line ever for a
+                  tipical Berlin attraction? <br /> tap on the attraction you
+                  are visiting to find out where you can eat the closest
+                  sausage!
+                </h3>
                 <Card sx={{ maxWidth: 1000 }}>
                   <CardMedia
                     component="img"
