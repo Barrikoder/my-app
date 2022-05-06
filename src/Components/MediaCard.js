@@ -19,12 +19,14 @@ export default function MediaCard({ data }) {
           return (
             <>
               <div>
-                <h1>Berlin Sausage Blog</h1>
+                <h1>Longlines - Berlin</h1>
                 <h3>
-                  got hungry while standing in the longest line ever for a
-                  tipical Berlin attraction? <br /> tap on the attraction you
-                  are visiting to find out where you can eat the closest
-                  sausage!
+                  One of the perks of visiting a tourist attraction is standing
+                  in an everlasting long lines for ...whatever, MAKE STANDING
+                  LINE AN ATTRACTION! got some food, get some drinks and get to
+                  know your line neighbors, Tap on the attraction you are at,
+                  and find about the closest best place to make waiting in line
+                  FUN!
                 </h3>
 
                 <Card sx={{ maxWidth: 1000 }}>
