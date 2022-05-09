@@ -22,11 +22,12 @@ export default function MediaCard({ data }) {
                 <h1>Longlines - Berlin</h1>
                 <h3>
                   One of the perks of visiting a tourist attraction is standing
-                  in an everlasting long lines for ...whatever, MAKE STANDING
-                  LINE AN ATTRACTION! got some food, get some drinks and get to
-                  know your line neighbors, Tap on the attraction you are at,
-                  and find about the closest best place to make waiting in line
-                  FUN!
+                  in an everlasting long lines for
+                  <br />
+                  ...whatever, MAKE STANDING LINE AN ATTRACTION! got some food,
+                  get some drinks and get to know your line neighbors, Tap on
+                  the attraction you are at, and find about the closest best
+                  place to make waiting in line FUN!
                 </h3>
 
                 <Card sx={{ maxWidth: 1000 }}>
