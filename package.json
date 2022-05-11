@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.12.1",
@@ -19,6 +20,8 @@
     "@testing-library/user-event": "^13.5.0",
     "contentful": "^9.1.24",
     "contentful-management": "^10.1.4",
+    "dotenv": "^16.0.0",
+    "pg": "^8.7.3",
     "pigeon-maps": "^0.21.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
